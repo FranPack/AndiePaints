@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/simple-lightbox.min.css">
+    <title>Andie Paints - Gallery</title>
+</head>
+<body>
+    <div id="banner" class="position-relative">
+        <nav id="navigation" class="navbar navbar-expand-md">
+            <div class="container-fluid">
+                <a id="logo" class="navbar-brand d-flex flex-column" href="#">
+                    Andie Ryan
+                </a>
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="sidebar offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fs-5">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="gallery.html">Gallery</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav> 
+        <div id="header" class="d-flex flex-column align-items-center">
+            <!--! Change Font size and width -->
+            <p id="mission">Gallery</p>
+        </div>
+    </div> 
+    <section id="gallerypage" class="d-flex flex-column">
+        <h2 class="title">Gallery</h2>
+        <div>
+            <div class="row align-items-center w-100">
+                <div class="col-lg-3 col-md-12 images pointer">
+                  <img src="assets/media/images/andie_before.jpg" class="w-100 rounded" data-toggle="lightbox" data-caption="Placeholder">
+                </div>
+                <div class="col-lg-3 col-md-12 images">
+                  <img src="assets/media/images/andie_after.jpg" class="w-100 rounded" data-toggle="lightbox">
+                </div>
+                <div class="col-lg-3 col-md-12 images">
+                  <img src="assets/media/images/andie_after.jpg" class="w-100 rounded" data-toggle="lightbox">
+                </div>
+                <div class="col-lg-3 col-md-12 images">
+                  <img src="assets/media/images/andie_after.jpg" class="w-100 rounded" data-toggle="lightbox">
+                </div>
+                <div class="col-lg-3 col-md-12 images">
+                  <img src="assets/media/images/andie_after.jpg" class="w-100 rounded" data-toggle="lightbox">
+                </div>
+                <div class="col-lg-3 col-md-12 images">
+                  <img src="assets/media/images/andie_after.jpg" class="w-100 rounded" data-toggle="lightbox">
+                </div>
+                <div class="col-lg-3 col-md-12 images">
+                  <img src="assets/media/images/andie_after.jpg" class="w-100 rounded" data-toggle="lightbox">
+                </div>
+                <div class="col-lg-3 col-md-12 images">
+                  <img src="assets/media/images/andie_after.jpg" class="w-100 rounded" data-toggle="lightbox">
+                </div>
+                <div class="col-lg-3 col-md-12 images">
+                  <img src="assets/media/images/andie_after.jpg" class="w-100 rounded" data-toggle="lightbox">
+                </div>
+                <div class="col-lg-3 col-md-12 images">
+                  <img src="assets/media/images/andie_after.jpg" class="w-100 rounded" data-toggle="lightbox">
+                </div>
+                <div class="col-lg-3 col-md-12 images">
+                  <img src="assets/media/images/andie_after.jpg" class="w-100 rounded" data-toggle="lightbox">
+                </div>
+                <div class="col-lg-3 col-md-12 images">
+                  <img src="assets/media/images/andie_after.jpg" class="w-100 rounded" data-toggle="lightbox">
+                </div>
+            </div>
+        </div>
+        <!-- <div id="lightbox" class="modal">
+            <span class="close cursor">&times;</span>
+            <div class="modal-content">
+                <img src="">
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+            </div>
+        </div> -->
+    </section>
+    <section id="footer" class="d-flex flex-column">
+        <a id="logo" class="navbar-brand text-center" href="#" style="color: black; ">
+            Andie Ryan
+        </a>
+        <div class="container-fluid d-flex flex-row justify-content-around">
+            <div class="d-flex flex-column w-100">
+                <h2 class="text-center">Links</h2>
+                <ul class="text-center">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex flex-column w-100">
+                <ul class="text-center">
+                <h2 class="text-center w-100">Contact Us</h2>
+                <ul class="text-center">
+                    <li>
+                        <a href="tel:+7572316885">(757) 231-6885</a>
+                    </li>
+                    <li>
+                        <a href="mailto:team@andiepaints.com">team@andiepaints.com</a>
+                    </li>
+                </ul>
+
+            </div>
+            
+            <div class="d-flex flex-column w-100">
+                <h2 class="text-center">Socials</h2>
+                <ul class="text-center">
+                    <li>
+                        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <p class="copyright text-center">
+            <i class="fa-regular fa-copyright"></i>
+            2022 Andie Ryan, LLC, All rights reserved
+        </p>    
+    </section>
+    <script src="assets/js/simple-lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+</body>
+</html>
