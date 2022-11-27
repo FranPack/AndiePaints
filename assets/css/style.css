@@ -1,5 +1,18 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Abhaya+Libre:wght@400;500;600;700;800&display=swap');
+
+@font-face {
+    font-family: Afrah;
+    font-weight: normal;
+    src: url(../fonts/AfrahDemo.otf);
+
+}
+:root {
+    --yellow: #ffcc00;
+    --green: #95978B;
+    --teal: #aac9d1;
+    --blue: #395186;
+}
 
 * {
     font-family: Inter;
@@ -25,19 +38,33 @@
     line-height: 2rem;
 }
 #navigation {
-    z-index: 1000;
+    z-index: 10000;
 }
 .navbar-toggler-icon {
     z-index: 1000;
     color: white;
+    background-image: none;
 }
+.navbar .btn-close {
+    background-image: none;
+    font-size: 30px;
+}
+.btn-close,
+.btn-close:focus,
+.btn-close:active,
+.navbar-toggler,
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
-    outline: none;
-    box-shadow: none;
-    border: none;
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
 }
+.navbar-toggler-icon::before {
+    font-family: FontAwesome;
+    font-size: 30px;
+    content: "\f0c9";
+  }
 #home-header {
     z-index: -1;
 }
@@ -45,13 +72,219 @@
     color:white;
     font-size: 1.5rem;
     font-weight: 600;
+    flex: 0 1 auto;
 }
+body.sticky #navigation {
+    position: fixed;
+    width: 100%;
+    background: var(--green);
+    text-align: left;
+    padding-left: 20px;
+    transition: .5s;
+    
+ }
+body.sticky #logo {
+    font-size: 40px;
+    color: #212529;
+}
+.contact-email {
+    /* margin-left: 1rem;
+    border-radius: ;
+    border: 2px solid var(--yellow);
+    border-color: var(--yellow);
+    font-size: 1.2rem !important;
+    padding: .5rem;
+    padding-right: 1rem !important;
+    padding-left: 1rem !important; */
+    /* color: var(--blue) !important; */
+
+}
+/* .contact-email:hover {
+    background-color: var(--yellow);
+    color: white;
+} */
 #banner {
     top: 0;
     background: center no-repeat rgb(218, 165, 32) url("../media/images/header.jpg"); 
     background-size: cover;
     height: 100vh;
     width: 100%;
+    z-index: 999;
+}
+.slideshow {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+    background-color: white;
+    overflow: hidden;
+}
+.slideshow li span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+	-webkit-backface-visibility: hidden;
+    -webkit-animation: imageAnimation 25s linear infinite 0s;
+    -moz-animation: imageAnimation 25s linear infinite 0s;
+    -o-animation: imageAnimation 25s linear infinite 0s;
+    -ms-animation: imageAnimation 25s linear infinite 0s;
+    animation: imageAnimation 25s linear infinite 0s;
+}
+.slideshow li:nth-child(1) span { background-image: url("../media/images/P1060976.jpg") }
+.slideshow li:nth-child(2) span {
+    background-image: url("../media/images/23A81DF0-2DC1-420C-B03F-91EE2431D92E.jpg");
+    -webkit-animation-delay: 6.25s;
+    -moz-animation-delay: 6.25s;
+    -o-animation-delay: 6.25s;
+    -ms-animation-delay: 6.25s;
+    animation-delay: 6.25s;
+}
+.slideshow li:nth-child(3) span {
+    background-image: url('../media/images/img_3802.jpg');
+    -webkit-animation-delay: 12.5s;
+    -moz-animation-delay: 12.5s;
+    -o-animation-delay: 12.5s;
+    -ms-animation-delay: 12.5s;
+    animation-delay: 12.5s;
+}
+.slideshow li:nth-child(4) span {
+    background-image: url("../media/images/IMG_3865.jpg");
+    -webkit-animation-delay: 18.75s;
+    -moz-animation-delay: 18.75s;
+    -o-animation-delay: 18.75s;
+    -ms-animation-delay: 18.75s;
+    animation-delay: 18.75s;
+}
+/* Animation for the slideshow images */
+@-webkit-keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    -webkit-animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    -webkit-transform: scale(1.05);
+	    -webkit-animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    -webkit-transform: scale(1.1);
+	}
+	25% {
+	    opacity: 0;
+	    -webkit-transform: scale(1.1);
+	}
+    75% {
+        opacity: 1;
+	    transform: scale(1.1);
+    }
+	100% { opacity: 0 }
+}
+@-moz-keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    -moz-animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    -moz-transform: scale(1.05);
+	    -moz-animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    -moz-transform: scale(1.1);
+	}
+	25% {
+	    opacity: 0;
+	    -moz-transform: scale(1.1);
+	}
+    75% {
+        opacity: 1;
+	    transform: scale(1.1);
+    }
+	100% { opacity: 0 }
+}
+@-o-keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    -o-animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    -o-transform: scale(1.05);
+	    -o-animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    -o-transform: scale(1.1);
+	}
+	25% {
+	    opacity: 0;
+	    -o-transform: scale(1.1);
+	}
+    75% {
+        opacity: 1;
+	    transform: scale(1.1);
+    }
+	100% { opacity: 0 }
+}
+@-ms-keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    -ms-animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    -ms-transform: scale(1.05);
+	    -ms-animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    -ms-transform: scale(1.1);
+	}
+	25% {
+	    opacity: 0;
+	    -ms-transform: scale(1.1);
+	}
+    75% {
+        opacity: 1;
+	    transform: scale(1.1);
+    }
+	100% { opacity: 0 }
+}
+@keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    transform: scale(1.05);
+	    animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    transform: scale(1.1);
+	}
+	25% {
+	    opacity: 1;
+	    transform: scale(1.1);
+	}
+    75% {
+        opacity: 1;
+	    transform: scale(1.1);
+    }
+	100% { opacity: 0 }
 }
 #banner:after {
     z-index: 1;
@@ -64,44 +297,70 @@
     bottom: 0;
     background: #21252779;
 }
-/* #header {
-    height: calc(100vh - 62px);
-} */
+#header {
+    height: 100vh;
+}
 .sidebar {
     width: 100px;
+}
+.mission-container {
+    flex: 1 1 auto;
+
 }
 #mission {
     z-index: 999;
     color: white;
     font-size: 55px;
-    font-family: Inter;
+    font-family: "Abhaya Libre";
     font-weight: 600;
     text-transform: uppercase;
     margin-left: 50px;
-    margin-top: 150px;
+    /* margin-top: 150px; */
 }
 #mission-i {
-    font-weight: 800;
     font-style: oblique;
+    font-family: "Abhaya Libre";
+    line-height: .9;
+    z-index: 999;
+}
+.process-video {
+    height: 450px;
 }
 #home-process {
     /* padding: 50px; */
-    width: 75%;
-    margin: auto;
+    z-index: 998;
+    padding: 100px 50px;
     margin-top: 50px;
     margin-bottom: 50px;
     flex-direction: column;
+    transform: skewY(-6deg);
+    background-color: var(--blue);
+    width: 100%;
 }
-#home-process .title, #about .title  {
+.home-process {
+    transform: skewY(6deg);
+    color: white;
+    
+}
+#home-process .title, #about .title, #home-gallery .title, #testimonials .title  {
     margin-bottom: 50px;
+    margin-top: 50px;
+    font-family: "Abhaya Libre";
+    font-weight: 800;
+    font-size: 3.5rem;
 }
 #about {
-    /* padding: 50px; */
-    width: 75%;
-    margin: auto;
+    z-index: 998;
+    width: 100%;
+    padding: 100px 50px;
     flex-direction: column;
     margin-top: 50px;
     margin-bottom: 50px;
+    transform: skewY(-6deg);
+    background-color: var(--yellow);
+}
+#about .title, #about .content {
+    transform: skewY(6deg);
 }
 #about .desc {
     word-wrap: normal;
@@ -135,11 +394,14 @@
     padding: 15px 20px;
     font-weight: 700;
     font-size: 1.2rem;
-    border: 2px solid black;
+    border: 2px solid white;
     /* background-color: #FFD75B; */
     background-color: unset;
-    color: black;
-
+    color: white;
+}
+#process-btn:hover {
+    background-color: white;
+    color: var(--blue);
 }
 .title  {
     font-size: 40px;
@@ -149,18 +411,59 @@
     font-weight: 500;
 
 }
-#gallery {
-    padding: 30px;
+#home-gallery {
+    width: 100%;
+    padding: 100px 50px;
     margin-top: 50px;
+    margin-bottom: 50px;
+
 }
-#gallery .tall:not(:first-child){
-    /* margin-left: 20px; */
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+
 }
-.gallery-btn, .short {
-    /* margin-left: 20px; */
+#gallery > li {
+    flex-basis: 300px; /*width: 350px;*/
+    position: relative;
 }
-.short {
-    margin-bottom: 20px;
+#gallery li img {
+    object-fit: cover;
+    max-width: 90%;
+    height: auto;
+    vertical-align: middle;
+    border-radius: 10px;
+}
+#testimonials {
+    width: 100%;
+    padding: 100px 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+#quotes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+}
+#quotes > li {
+    position: relative;
+    background-color: white;
+    padding: 10px;
+}
+#quotes .quote {
+    font-family: "Abhaya Libre";
+    font-size: 25px;
+    font-weight: bold;
+}
+#quotes .author {
+    font-style: italic;
+    font-size: 18px;
 }
 #contactus {
     margin-top: 50px;
@@ -176,7 +479,7 @@
     width: 100%;
 }
 #footer {
-    background-color: gray;
+    z-index: 999;
     margin-top: 30px;
 }
 ul {
@@ -185,7 +488,7 @@ ul {
 }
 #footer a {
     text-decoration: none;
-    color: white;
+    /* color: white; */
 }
 #footer h2 {
     padding-bottom: 15px;
@@ -247,22 +550,36 @@ ul {
     padding: 2px 16px;
     color: white;
   }
+.lightbox .lb-image {
+    border-color: var(--green) !important;
+}
 @media (max-width: 768px) {
+    .navbar-nav {
+        align-items: start !important;
+    }
+    .navbar-nav .contact-email {
+        margin-left: 0;
+    }
     #logo {
         font-size: 3rem;
     }
     #process-left {
         display: none;
     }
-    #about .content{
-        align-items: flex-start;
+    #about .title, #home-process .title, #home-gallery .title {
+        font-size: 40px;
+        margin-top: 25px;
+        margin-bottom: 25px;
     }
-    #about {
-        width: 85%;
+    #about, #home-process {
+        padding: 50px 25px;
+    }
+    #about .content{
     }
     #about p {
         font-size: .8rem;
         text-align: center;
+        margin: 0 20px;
     }
     #about img {
         width: 150px;

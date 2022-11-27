@@ -1,4 +1,10 @@
-
-var lightbox = new SimpleLightbox('#gallerypage img', { 
-    overlay = true
- });
+// var navheight = $("#navigation").height()
+// console.log(navheight)
+// $(window).scroll(function() {
+//     if ($(this).scrollTop() > navheight){  
+//         $('body').addClass("sticky");
+//     }
+//     else{
+//         $('body').removeClass("sticky");
+//     }
+// });
