@@ -7,96 +7,156 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/simple-lightbox.min.css">
+    <link href="assets/css/lightbox.css" rel="stylesheet">
     <title>Andie Paints - Gallery</title>
 </head>
-<body>
+<body data-page="gallery">
     <div id="banner" class="position-relative">
-        <nav id="navigation" class="navbar navbar-expand-md">
-            <div class="container-fluid">
-                <a id="logo" class="navbar-brand d-flex flex-column" href="#">
-                    Andie Ryan
-                </a>
-                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="sidebar offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fs-5">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="gallery.html">Gallery</a>
-                            </li>
-                        </ul>
+        <ul class="slideshow">
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+            <li><span></span></li>
+          </ul>
+          <div id="header" class="d-flex flex-column">
+            <nav id="navigation" class=" navbar navbar-expand-md">
+                <div class="container-fluid">
+                    <a id="logo" class="navbar-brand d-flex flex-column" href="#">
+                        Andie Ryan
+                    </a>
+                    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="sidebar offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fs-5 align-items-center">
+                                <li class="nav-item">
+                                    <a class="nav-link "href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="gallery.html">Gallery</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link contact-email" href="mailto:team@andiepaints.com">Contact Us</a>
+                                </li>
+                                
+                            </ul>
+                        </div>
                     </div>
                 </div>
+            </nav> 
+            <div class=" mission-container d-flex flex-column justify-content-center">
+                <p id="mission" class="d-flex flex-column">
+                    <span id="mission-i">Specialty</span>
+                    <span id="mission-i"">Painting, Home,</span>
+                    <span id="mission-i">and Design</span>
+                </p>
             </div>
-        </nav> 
-        <div id="header" class="d-flex flex-column align-items-center">
-            <!--! Change Font size and width -->
-            <p id="mission">Gallery</p>
-        </div>
-    </div> 
+          </div>
+    </div>  
     <section id="gallerypage" class="d-flex flex-column">
-        <!-- <h2 class="title">Gallery</h2> -->
-        <div>
-            <div class="row align-items-center w-100">
-                <div class="col-lg-3 col-md-12 images pointer">
-                  <img src="assets/media/images/andie_before.jpg" class="w-100 rounded" data-toggle="lightbox" data-caption="Placeholder">
-                </div>
-                <div class="col-lg-3 col-md-12 images">
-                  <img src="assets/media/images/andie_after.jpg" class="w-100 rounded" data-toggle="lightbox">
-                </div>
-                <div class="col-lg-3 col-md-12 images">
-                  <img src="assets/media/images/andie_after.jpg" class="w-100 rounded" data-toggle="lightbox">
-                </div>
-                <div class="col-lg-3 col-md-12 images">
-                  <img src="assets/media/images/andie_after.jpg" class="w-100 rounded" data-toggle="lightbox">
-                </div>
-                <div class="col-lg-3 col-md-12 images">
-                  <img src="assets/media/images/andie_after.jpg" class="w-100 rounded" data-toggle="lightbox">
-                </div>
-                <div class="col-lg-3 col-md-12 images">
-                  <img src="assets/media/images/andie_after.jpg" class="w-100 rounded" data-toggle="lightbox">
-                </div>
-                <div class="col-lg-3 col-md-12 images">
-                  <img src="assets/media/images/andie_after.jpg" class="w-100 rounded" data-toggle="lightbox">
-                </div>
-                <div class="col-lg-3 col-md-12 images">
-                  <img src="assets/media/images/andie_after.jpg" class="w-100 rounded" data-toggle="lightbox">
-                </div>
-                <div class="col-lg-3 col-md-12 images">
-                  <img src="assets/media/images/andie_after.jpg" class="w-100 rounded" data-toggle="lightbox">
-                </div>
-                <div class="col-lg-3 col-md-12 images">
-                  <img src="assets/media/images/andie_after.jpg" class="w-100 rounded" data-toggle="lightbox">
-                </div>
-                <div class="col-lg-3 col-md-12 images">
-                  <img src="assets/media/images/andie_after.jpg" class="w-100 rounded" data-toggle="lightbox">
-                </div>
-                <div class="col-lg-3 col-md-12 images">
-                  <img src="assets/media/images/andie_after.jpg" class="w-100 rounded" data-toggle="lightbox">
-                </div>
-            </div>
-        </div>
-        <!-- <div id="lightbox" class="modal">
-            <span class="close cursor">&times;</span>
-            <div class="modal-content">
-                <img src="">
-                <div class="caption-container">
-                    <p id="caption"></p>
-                </div>
-            </div>
-        </div> -->
+        <h2 class="title">Gallery</h2>
+        <ul id="gallery">
+            <li>
+                <a href="assets/media/images/P1060976.jpg" data-lightbox="gallery" data-title="Placeholder">
+                    <img src="assets/media/images/P1060976.jpg" class="rounded">
+                </a>
+            </li>
+            <li>
+                <a href="assets/media/images/IMG_2553.jpg" data-lightbox="gallery" data-title="Placeholder">
+                    <img src="assets/media/images/IMG_2553.jpg" class="rounded">
+                </a>
+            </li>
+            <li>
+                <a href="assets/media/images/6CA4CF4B-05AB-4E61-BBDD-8F55C71C267D.jpg" data-lightbox="gallery" data-title="Placeholder">
+                    <img src="assets/media/images/6CA4CF4B-05AB-4E61-BBDD-8F55C71C267D.jpg" class="rounded">
+                </a>
+            </li>
+            <li>
+                <a href="assets/media/images/IMG_3802.jpg" data-lightbox="gallery" data-title="Placeholder">
+                    <img src="assets/media/images/IMG_3802.jpg" class="rounded">
+                </a>
+            </li>
+            <li>
+                <a href="assets/media/images/6E9474F2-8A00-4A10-8681-FCCF2AB64A4A.jpg" data-lightbox="gallery" data-title="Placeholder">
+                    <img src="assets/media/images/6E9474F2-8A00-4A10-8681-FCCF2AB64A4A.jpg" class=" rounded" >
+                </a>
+            </li>
+            <li>
+                <a href="assets/media/images/E0CED2B9-72A2-4B6D-9631-AEAFC0D49B3F.jpg" data-lightbox="gallery" data-title="Placeholder">
+                    <img src="assets/media/images/E0CED2B9-72A2-4B6D-9631-AEAFC0D49B3F.jpg" class="rounded">
+                </a>
+            </li>
+            <li>
+                <a href="assets/media/images/F45E4898-BA34-4C3A-8076-B1B90CCE8872.jpg" data-lightbox="gallery" data-title="Placeholder">
+                    <img src="assets/media/images/F45E4898-BA34-4C3A-8076-B1B90CCE8872.jpg" class="rounded">
+                </a>
+            </li>
+            <li>
+                <a href="assets/media/images/P1060974.jpg" data-lightbox="gallery" data-title="Placeholder">
+                    <img src="assets/media/images/P1060974.jpg" class="rounded" >
+                </a>
+            </li>
+            <li>
+                <a href="assets/media/images/andie_after.jpg" data-lightbox="home-gallery" data-title="Placeholder">
+                    <img src="assets/media/images/andie_after.jpg" class="rounded">
+                </a>
+            </li>
+            <li>
+                <a href="assets/media/images/IMG_3800.jpg" data-lightbox="gallery" data-title="Placeholder">
+                    <img src="assets/media/images/IMG_3800.jpg" class=" rounded">
+                </a>
+            </li>
+            <li>
+                <a href="assets/media/images/IMG_3798.jpg" data-lightbox="gallery" data-title="Placeholder">
+                    <img src="assets/media/images/IMG_3798.jpg" class="rounded" >
+                </a>
+            </li>
+            <li>
+                <a href="assets/media/images/IMG_2706_jpg.jpg" data-lightbox="gallery" data-title="Placeholder">
+                    <img src="assets/media/images/IMG_2706_jpg.jpg" class="rounded" >
+                </a>
+            </li>
+            <li>
+                <a href="assets/media/images/IMG_2711.jpg" data-lightbox="gallery" data-title="Placeholder">
+                    <img src="assets/media/images/IMG_2711.jpg" class="rounded" >
+                </a>
+            </li>
+            <li>
+                <a href="assets/media/images/IMG_3866.jpg" data-lightbox="gallery" data-title="Placeholder">
+                    <img src="assets/media/images/IMG_3866.jpg" class="rounded" >
+                </a>
+            </li>
+            <li>
+                <a href="assets/media/images/F7839128-4BB8-44CF-82B1-F5E69EC6F846.jpg" data-lightbox="gallery" data-title="Placeholder">
+                    <img src="assets/media/images/F7839128-4BB8-44CF-82B1-F5E69EC6F846.jpg" class="rounded" >
+                </a>
+            </li>
+            <li>
+                <a href="assets/media/images/1D21D2FA-DA40-47C2-9ACA-993180EDDD6D.jpg" data-lightbox="gallery" data-title="Placeholder">
+                    <img src="assets/media/images/1D21D2FA-DA40-47C2-9ACA-993180EDDD6D.jpg" class="rounded" >
+                </a>
+            </li>
+            <li>
+                <a href="assets/media/images/47881D9E-4BB8-44B1-B3A2-53BA8F89E303.jpg" data-lightbox="gallery" data-title="Placeholder">
+                    <img src="assets/media/images/47881D9E-4BB8-44B1-B3A2-53BA8F89E303.jpg" class="rounded" >
+                </a>
+            </li>
+            <li>
+                <a href="assets/media/images/2BA90F8C-2A2B-4805-ACEB-205ADC783BD8.jpg" data-lightbox="gallery" data-title="Placeholder">
+                    <img src="assets/media/images/2BA90F8C-2A2B-4805-ACEB-205ADC783BD8.jpg" class="rounded" >
+                </a>
+            </li>
+        </ul>
     </section>
     <section id="footer" class="d-flex flex-column">
         <a id="logo" class="navbar-brand text-center" href="#" style="color: black; ">
@@ -141,15 +201,23 @@
 
             </div>
         </div>
-        <p class="copyright text-center">
+        <p class="copyright">
             <i class="fa-regular fa-copyright"></i>
-            2022 Andie Ryan, LLC, All rights reserved
+            2022 Andie Ryan, LLC. All rights reserved
         </p>    
     </section>
-    <script src="assets/js/simple-lightbox.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="assets/js/lightbox.min.js"></script>
+    <script>
+        lightbox.option({
+          'disableScrolling': true,
+          'wrapAround': true,
+          'alwaysShowNavOnTouchDevices': true
+        })
+
+    </script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -10,7 +10,7 @@
     <link href="assets/css/lightbox.css" rel="stylesheet">
     <title>Andie Paints</title>
 </head>
-<body>
+<body data-page="home">
     <div id="banner" class="position-relative">
         <ul class="slideshow">
             <li><span></span></li>
@@ -29,7 +29,7 @@
                     <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="sidebar offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
                             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
@@ -145,8 +145,8 @@
         <a id="logo" class="navbar-brand text-center" href="#" style="color: black; ">
             Andie Ryan
         </a>
-        <div class="container-fluid d-flex flex-row justify-content-around">
-            <div class="d-flex flex-column w-100">
+        <div class="footer-content container-fluid d-flex flex-row justify-content-around">
+            <!-- <div class="d-flex flex-column w-100">
                 <h2 class="text-center">Links</h2>
                 <ul class="text-center">
                     <li>
@@ -159,7 +159,7 @@
                         <a href="gallery.html">Gallery</a>
                     </li>
                 </ul>
-            </div>
+            </div> -->
             <div class="d-flex flex-column w-100">
                 <ul class="text-center">
                 <h2 class="text-center w-100">Contact Us</h2>
@@ -176,7 +176,13 @@
             
             <div class="d-flex flex-column w-100">
                 <h2 class="text-center">Socials</h2>
-                <ul class="text-center">
+                <ul class="justify-content-center d-flex flex-row">
+                    <li>
+                        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    </li>
                     <li>
                         <a href=""><i class="fa-brands fa-facebook-f"></i></a>
                     </li>
@@ -184,9 +190,9 @@
 
             </div>
         </div>
-        <p class="copyright text-center">
+        <p class="copyright">
             <i class="fa-regular fa-copyright"></i>
-            2022 Andie Ryan, LLC, All rights reserved
+            2022 Andie Ryan, LLC. All rights reserved
         </p>    
     </section>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
