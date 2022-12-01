@@ -52,6 +52,12 @@
 .navbar .btn-close {
     background-image: none;
     font-size: 30px;
+    position: relative;
+    color: #212529;
+    z-index: 10000;
+}
+.btn-close i {
+    color: #212529 !important;
 }
 .btn-close,
 .btn-close:focus,
@@ -68,6 +74,7 @@
     font-family: FontAwesome;
     font-size: 30px;
     content: "\f0c9";
+
 }
 #home-header {
     z-index: -1;
@@ -363,12 +370,56 @@ body.sticky .nav-link {
     color: white;
     
 }
-#home-process .title, #about .title, #home-gallery .title, #testimonials .title, #gallerypage .title {
+#home-process .title, #about .title, #home-gallery .title, #testimonials .title, #gallerypage .title, #about-page .title, #about-process .title, #mission-statement .title, #story .title{
     margin-bottom: 50px;
     margin-top: 50px;
     font-family: "Abhaya Libre";
     font-weight: 800;
     font-size: 3.5rem;
+}
+.desc {
+    font-size: 1.5rem;
+}
+.lil-title {
+    font-size: 2.5rem;
+}
+#mission-statement {
+    z-index: 998;
+    width: 100%;
+    padding: 100px 50px;
+    flex-direction: column;
+    /* margin-top: 50px; */
+    margin-bottom: 50px;
+    /* transform: skewY(6deg);
+    background-color: var(--teal); */
+
+}
+#mission-statement .title {
+    margin-top: 0;
+}
+#story {
+    z-index: 998;
+    width: 100%;
+    padding: 100px 50px;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    transform: skewY(-6deg);
+    background-color: var(--teal);
+}
+#story > * {
+    transform: skewY(6deg);
+}
+#about-process {
+    z-index: 998;
+    width: 100%;
+    padding: 100px 50px;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* transform: skewY(-6deg);
+    background-color: var(--teal); */
+
 }
 #about {
     z-index: 998;
@@ -424,10 +475,10 @@ body.sticky .nav-link {
     background-color: white;
     color: var(--blue);
 }
-.title  {
+/* .title  {
     font-size: 40px;
     font-weight: 900;
-}
+} */
 .desc {
     font-weight: 500;
 
@@ -438,6 +489,36 @@ body.sticky .nav-link {
     margin-top: 50px;
     margin-bottom: 50px;
 
+}
+#about-page {
+    z-index: 998;
+    width: 100%;
+    /* padding: 100px 50px; */
+    padding: 0 50px;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /* transform: skewY(-6deg); */
+    /* background-color: var(--yellow); */
+}
+#about-page .desc {
+    font-size: 1.2rem;
+    word-wrap: normal;
+    flex-wrap: wrap;
+}
+#about-page .title {
+    margin-bottom: 15px;
+}
+.about-process h2 {
+    font-family: "abhaya libre";
+    font-weight: 900;
+}
+.about-process img {
+    border-radius: 10px;
+}
+.about-process {
+    flex-wrap: wrap;
+    gap: 10px;
 }
 #gallery {
     display: flex;
@@ -477,7 +558,7 @@ body.sticky .nav-link {
     width: 100%;
     padding: 100px 50px;
     margin-top: 50px;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 
 }
 #quotes {
@@ -521,16 +602,16 @@ body.sticky .nav-link {
     /* border-top: 5px solid var(--yellow); */
     background-color: var(--teal);
     width: 100%;
-    padding-top: 30px;
-    margin-top: 50px;
-    margin-bottom: -50px;
+    padding: 10px 30px;
+    position: relative;
+    /* margin-top: 50px; */
 }
 ul {
     list-style-type: none;
     padding-left: unset;
 }
-#footer #logo, #footer .footer-content, #footer .copyright {
-    /* transform: skewY(-6deg) !important; */
+#footer #logo{
+    font-size: 60px;
 }
 #footer a {
     text-decoration: none;
@@ -540,19 +621,31 @@ ul {
     margin-top: 30px;
     padding-bottom: 15px;
     font-family: "Abhaya Libre";
-    font-weight: 700;
+    font-weight: 800;
     color: #212529;
 }
 #footer a  i {
-    font-size: 1.5rem;
+    font-size: 1.7em;
 }
 #footer a .fa-facebook-f {
-    color: #4267B2;
+    /* color: #4267B2; */
 }
 #footer .copyright {
-    text-align: center;
+    text-align: start;
+    padding-top: 15px;
     margin-bottom: 0;
-    padding-top: 30px;
+}
+#footer li:hover {
+    text-decoration: underline;
+}
+#footer ul {
+    margin-bottom: 0;
+}
+.footer-logo-mobile {
+    display: none;
+}
+.socials li:nth-child(2) {
+    margin-left: 15px;
 }
 #footer .copyright i {
     font-size: .85rem;
@@ -560,6 +653,7 @@ ul {
 .images {
     --bs-gutter-y: 1.5rem;
 }
+
 .modal {
     display: none;
     position: fixed;
@@ -630,7 +724,7 @@ ul {
     #process-left {
         display: none;
     }
-    #about .title, #home-process .title, #home-gallery .title, #gallerypage .title, #testimonials .title {
+    #about .title, #home-process .title, #home-gallery .title, #gallerypage .title, #testimonials .title, #about-process .title {
         font-size: 40px;
         margin-top: 25px;
         margin-bottom: 25px;
@@ -668,5 +762,17 @@ ul {
     }
     #quotes .quote {
         font-size: 20px;
+    }
+    #footer #logo {
+        font-size: 45px;
+    }
+    .footer-logo-mobile {
+        display: unset;
+    }
+    .footer-logo {
+        display: none;
+    }
+    .socials a {
+        font-size: 16px;
     }
 }
