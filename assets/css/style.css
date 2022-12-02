@@ -5,7 +5,6 @@
     font-family: Afrah;
     font-weight: normal;
     src: url(../fonts/AfrahDemo.otf);
-
 }
 :root {
     --yellow: #ffcc00;
@@ -84,6 +83,9 @@
     font-size: 1.5rem;
     font-weight: 600;
     flex: 0 1 auto;
+}
+.nav-link:hover {
+    color: var(--teal) !important;
 }
 body.sticky #navigation {
     position: fixed;
@@ -718,6 +720,7 @@ ul {
     .nav-link {
         color: #212529 !important;
     }
+    
     .sticky .navbar-toggler-icon::before {
         color: #212529;
     }
