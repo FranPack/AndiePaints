@@ -6,13 +6,15 @@
     font-weight: normal;
     src: url(../fonts/AfrahDemo.otf);
 }
+.grecaptcha-badge { visibility: hidden; }
 :root {
     --yellow: #ffcc00;
     --green: #95978B;
     --teal: #aac9d1;
     --blue: #395186;
+    --lightpink: #FFECEC;
+    --pink: #FABDBD;
 }
-
 * {
     font-family: Inter;
     margin: 0px;
@@ -24,7 +26,7 @@
     z-index: 1;
     font-family: 'Dancing Script';
     /* font-size: 30px; */
-    font-size: 60px;
+    /* font-size: 60px; */
     font-weight: 800;
     color: white;
     /* background: -webkit-linear-gradient(#FFDD00, #FBB034);
@@ -32,9 +34,30 @@
     -webkit-text-fill-color: transparent; */
     text-decoration: none;
     margin-left: 30px;
+    width: 200px;
 }
 #footer #logo {
     margin-left: 0;
+}
+#contact-form {
+    background-color: var(--lightpink);
+    padding: 33px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+}
+#contact-form fieldset {
+    display: flex;
+    flex-direction: column;
+}
+.btn-submit .btn{
+    background-color: white;
+    color: #212529;
+    font-weight: bold;
+}
+.footer-logo .logo-img {
+    width: 250px;
 }
 #logo span {
     line-height: 2rem;
@@ -78,14 +101,20 @@
 #home-header {
     z-index: -1;
 }
+[data-page="home"] #navigation .nav-link {
+    color: white;
+}
 #navigation .nav-link {
-    color:white;
+    color:#212529;
     font-size: 1.5rem;
     font-weight: 600;
     flex: 0 1 auto;
 }
 .nav-link:hover {
-    color: var(--teal) !important;
+    color: var(--pink) !important;
+}
+[data-page="home"] .nav-link:hover {
+    color: var(--teal) !important
 }
 body.sticky #navigation {
     position: fixed;
@@ -94,12 +123,11 @@ body.sticky #navigation {
     text-align: left;
     padding-left: 20px;
     transition: .5s;
-    border-bottom: 5px solid var(--green);
+    border-bottom: 5px solid var(--lightpink);
     
  }
-body.sticky #logo {
-    font-size: 40px;
-    color: #212529;
+[data-page="home"].sticky .logo-img {
+    filter: invert(1)
 }
 body.sticky .nav-link {
     color:#212529 !important;
@@ -128,6 +156,13 @@ body.sticky .nav-link {
     width: 100%;
     z-index: 999;
 }
+[data-page="gallery"] #banner, [data-page="about"] #banner {
+    background: unset;
+    height: unset;
+}
+[data-page="gallery"] #header, [data-page="about"] #header {
+    height: unset;
+}
 .slideshow {
     position: absolute;
     width: 100%;
@@ -135,7 +170,7 @@ body.sticky .nav-link {
     top: 0px;
     left: 0px;
     z-index: 0;
-    background-color: var(--blue);
+    background-color: var(--yellow);
     overflow: hidden;
 }
 .slideshow li span {
@@ -351,6 +386,7 @@ body.sticky .nav-link {
     flex-direction: column;
     transform: skewY(-6deg);
     background-color: var(--yellow);
+    outline: 10px solid rgba(255, 204, 0, 0.5);
     width: 100%;
 }
 #gallerypage #gallery, #gallerypage .title {
@@ -372,7 +408,7 @@ body.sticky .nav-link {
     color: white;
     
 }
-#home-process .title, #about .title, #home-gallery .title, #testimonials .title, #gallerypage .title, #about-page .title, #about-process .title, #mission-statement .title, #story .title{
+#home-process .title, #about .title, #home-gallery .title, #testimonials .title, #gallerypage .title, #about-page .title, #about-process .title, #mission-statement .title, #story .title, #contact-us .title{
     margin-bottom: 50px;
     margin-top: 50px;
     font-family: "Abhaya Libre";
@@ -408,6 +444,8 @@ body.sticky .nav-link {
     margin-bottom: 50px;
     transform: skewY(-6deg);
     background-color: var(--teal);
+    outline: 10px solid rgba(170, 201, 209, .55);
+
 }
 #story > * {
     transform: skewY(6deg);
@@ -421,7 +459,6 @@ body.sticky .nav-link {
     margin-bottom: 50px;
     /* transform: skewY(-6deg);
     background-color: var(--teal); */
-
 }
 #about {
     z-index: 998;
@@ -432,6 +469,9 @@ body.sticky .nav-link {
     margin-bottom: 50px;
     transform: skewY(-6deg);
     background-color: var(--yellow);
+    /* border-top: 10px solid ; */
+    outline: 10px solid rgba(255, 204, 0, 0.5);
+
 }
 #about .title, #about .content {
     transform: skewY(6deg);
@@ -530,7 +570,7 @@ body.sticky .nav-link {
 
 }
 #navigation .active {
-    color: var(--teal) !important;
+    color: var(--pink) !important;
     font-style: italic;
 }
 [data-page="home"] #gallery > li {
@@ -559,10 +599,95 @@ body.sticky .nav-link {
 #testimonials {
     width: 100%;
     padding: 100px 50px;
-    margin-top: 50px;
+    background-color: var(--teal);
+    outline: 10px solid rgba(170, 201, 209, .55);
+    transform: skewY(-6deg);
+    /* margin-top: 50px; */
     /* margin-bottom: 50px; */
 
 }
+#testimonials .title {
+    transform: skewY(6deg);
+    
+}
+.testimonial {
+    transform: skewY(6deg);
+    position: relative;
+    display: flex;
+    /* max-width: 900px; */
+    width: 100%;
+    padding: 50px 0;
+    overflow: hidden;
+}
+.testimonial .image {
+    height: 170px;
+    width: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .testimonial .slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 30px;
+    height: 100%;
+    width: 100%;
+  }
+  .slide p {
+    text-align: center;
+    padding: 0 160px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #212529;
+    font-weight: 500;
+  }
+  .slide .quote-icon {
+    font-size: 30px;
+    color: var(--blue);
+  }
+  .slide .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .details .name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #212529;
+  }
+  /* swiper button css */
+  .nav-btn {
+    height: 40px;
+    width: 40px;
+    transform: translateY(30px);
+    transition: 0.2s;
+  }
+  .nav-btn::after,
+  .nav-btn::before {
+    font-size: 40px;
+    color: var(--blue);
+  }
+  .nav-btn:hover::after,
+  .nav-btn:hover::before {
+    opacity: 75%;
+  }
+  .swiper-pagination-bullet {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .swiper-pagination-bullet-active {
+    background-color: var(--blue);
+  }
+  @media screen and (max-width: 768px) {
+    .slide p {
+      padding: 0 20px;
+    }
+    .nav-btn {
+      display: none;
+    }
+  }
+  
+
 #quotes {
     display: flex;
     flex-wrap: wrap;
@@ -582,9 +707,9 @@ body.sticky .nav-link {
 }
 #quotes .author {
     font-style: italic;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 18px;
-    color: var(--green);
+    color: var(--teal);
 }
 #contactus {
     margin-top: 50px;
@@ -599,10 +724,24 @@ body.sticky .nav-link {
     background-color: gray;
     width: 100%;
 }
+#contact-us {
+    z-index: 998;
+    width: 100%;
+    padding: 100px 50px;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: center;
+
+}
+#contact-us .content {
+    justify-content: center;
+}
 #footer {
     z-index: 999;
     /* border-top: 5px solid var(--yellow); */
-    background-color: var(--teal);
+    background-color: white;
+    outline: 5px solid var(--pink);
     width: 100%;
     padding: 10px 30px;
     position: relative;
@@ -612,12 +751,12 @@ ul {
     list-style-type: none;
     padding-left: unset;
 }
-#footer #logo{
-    font-size: 60px;
+#footer #logo-img{
+    width: 100px;
 }
 #footer a {
     text-decoration: none;
-    color: white;
+    color: #212529;
 }
 #footer h2 {
     margin-top: 30px;
@@ -699,7 +838,7 @@ ul {
     color: white;
   }
 .lightbox .lb-image {
-    border-color: var(--green) !important;
+    border-color: white !important;
 }
 @media (max-width: 767px) {
     .navbar-nav {
@@ -712,7 +851,7 @@ ul {
         margin-left: 0;
     }
     #logo {
-        font-size: 3rem;
+        width: 200px;
     }
     body.sticky .nav-link {
         color: #212529 !important;
@@ -727,12 +866,12 @@ ul {
     #process-left {
         display: none;
     }
-    #about .title, #home-process .title, #home-gallery .title, #gallerypage .title, #testimonials .title, #about-process .title {
+    #about .title, #home-process .title, #home-gallery .title, #gallerypage .title, #testimonials .title, #about-process .title, #contact-us .title {
         font-size: 40px;
         margin-top: 25px;
         margin-bottom: 25px;
     }
-    #about, #home-process, #home-gallery, #testimonials {
+    #about, #home-process, #home-gallery, #testimonials, #contact-us {
         padding: 50px 25px;
     }
     #about .content{
@@ -767,7 +906,13 @@ ul {
         font-size: 20px;
     }
     #footer #logo {
-        font-size: 45px;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    #footer .logo-img {
+        width: 200px;
     }
     .footer-logo-mobile {
         display: unset;
