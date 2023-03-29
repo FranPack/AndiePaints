@@ -1,3 +1,13 @@
+// glightbox
+const glightbox = GLightbox({
+  touchNavigation: true,
+  touchFollowAxis: true,
+  zoomable: false,
+  loop: true,
+});
+
+
+
 var navheight = $("#navigation").height()
 // console.log(navheight)
 $(window).scroll(function() {
@@ -8,6 +18,20 @@ $(window).scroll(function() {
         $('body').removeClass("sticky");
     }
 });
+
+var banner = new Swiper(".hero-swiper", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true
+  },
+  loop: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+})
 
 var swiper = new Swiper(".mySwiper", {
     autoplay: {
@@ -24,7 +48,7 @@ var swiper = new Swiper(".mySwiper", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-  });
+});
 // Form Validation
 (() => {
   'use strict'

@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="assets/css/lightbox.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
     <link
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="assets/css/glightbox.min.css" />
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Andie Paints</title>
     <meta property="og:title" content='Andie Ryan'>
@@ -20,23 +20,30 @@
     <meta property="og:description" content='Specialty Painting, Home, and Design'>
     <meta property="og:type" content='website'>
     <meta property="og:image" content="https://andiepaints.com/assets/media/images/card.png">
-    <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body data-page="home">
     <div id="banner" class="position-relative">
-        <ul class="slideshow">
-            <li><span></span></li>
-            <li><span></span></li>
-            <li><span></span></li>
-            <li><span></span></li>
-            <li><span></span></li>
-            <li><span></span></li>
-          </ul>
+        <div class="hero-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="assets/media/images/Hero/slide1.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/media/images/Hero/slide2.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/media/images/Hero/slide3.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/media/images/Hero/slide4.jpg">
+                </div>
+            </div>
+        </div>
           <div id="header" class="d-flex flex-column">
             <nav id="navigation" class=" navbar navbar-expand-md">
                 <div class="container-fluid">
                     <a id="logo" class="navbar-brand d-flex flex-column" href="index.html">
-                        <img src="/assets/media/images/LogoWhite.png" alt="." class="logo-img">
+                        <img src="/assets/media/images/LogoWhite.png" alt="." class="logo-img-nav">
                     </a>
                     <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                         <span class="navbar-toggler-icon"></span>
@@ -52,13 +59,16 @@
                                     <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="about.html">About</a>
+                                    <a class="nav-link" href="process.html">Process</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="gallery.html">Gallery</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link contact-email" href="mailto:team@andiepaints.com">Contact Us</a>
+                                    <a class="nav-link" href="about.html">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link contact-email" href="" data-bs-toggle="modal" data-bs-target="#contact-modal">Get a Quote</a>
                                 </li>
                                 
                             </ul>
@@ -68,9 +78,8 @@
             </nav> 
             <div class=" mission-container d-flex flex-column justify-content-center">
                 <p id="mission" class="d-flex flex-column">
-                    <span id="mission-i">Specialty</span>
-                    <span id="mission-i"">Painting, Home,</span>
-                    <span id="mission-i">and Design</span>
+                    <span id="mission-i">Cabinet Painting,</span>
+                    <span id="mission-i">Refinishing, & Design.</span>
                 </p>
             </div>
           </div>
@@ -144,41 +153,31 @@
         <h2 class="title">Results</h2>
         <ul id="gallery">
             <li>
-                <a href="assets/media/images/6E9474F2-8A00-4A10-8681-FCCF2AB64A4A.jpg" data-lightbox="home-gallery" >
+                <a href="assets/media/images/6E9474F2-8A00-4A10-8681-FCCF2AB64A4A.jpg" class="glightbox" data-gallery="gallery1">
                     <img src="assets/media/images/6E9474F2-8A00-4A10-8681-FCCF2AB64A4A.jpg" class="left-gallery rounded" >
                 </a>
             </li>
             <li>
-                <a href="assets/media/images/andie_after.jpg" data-lightbox="home-gallery" >
+                <a href="assets/media/images/andie_after.jpg" class="glightbox" data-gallery="gallery1">
                     <img src="assets/media/images/andie_after.jpg" class="middle-gallery rounded">
                 </a>
             </li>
             <li>
-                <a href="assets/media/images/IMG_3800.jpg" data-lightbox="home-gallery" >
+                <a href="assets/media/images/IMG_3800.jpg" class="glightbox" data-gallery="gallery1">
                     <img src="assets/media/images/IMG_3800.jpg" class=" rounded">
                 </a>
             </li>
             <li>
-                <a href="assets/media/images/IMG_3866.jpg" data-lightbox="home-gallery" >
+                <a href="assets/media/images/IMG_3866.jpg" class="glightbox" data-gallery="gallery1">
                     <img src="assets/media/images/IMG_3866.jpg" class=" rounded">
                 </a>
             </li>
         </ul>
-        <!-- <div class="d-flex" id="gallery">
-            <div class="align-items-center d-flex flex-row">
-                  <img src="assets/media/images/andie_before.jpg" class="left-gallery rounded" >
-                  <img src="assets/media/images/andie_after.jpg" class="middle-gallery rounded">
-                  <div class="right-gallery d-flex flex-column">
-                    <img src="assets/media/images/andie_tables.jpg" class=" rounded mb-4">
-                    <button class="gallery-btn btn p-auto" href="/gallery.html">More</button>
-                  </div>
-            </div>
-        </div> -->
     </section>
     <section id="about" class="d-flex ">
         <h2 class="title">About Andie</h2>
         <div  class="d-flex flex-row content">
-            <a href="assets/media/images/Andie_Ryan.jpg" data-lightbox="about-andie" data-title="Andie Ryan">
+            <a class="glightbox" href="assets/media/images/Andie_Ryan.jpg" data-lightbox="about-andie">
                 <img id="about-left" class="mx-auto" width="250px" src="assets/media/images/Andie_Ryan.jpg">
 
             </a>
@@ -219,60 +218,105 @@
         </div>
     </section>
     <section id="footer" class="d-flex flex-column">
-        <a id="logo" class="footer-logo-mobile navbar-brand text-center" href="index.html" style="color: black; ">
+        <a id="logo" class="footer-logo-mobile navbar-brand text-center" href="index.html">
             <img src="/assets/media/images/LogoBlack.png" alt="" class="logo-img">
         </a>
-        <div class="footer-content container-fluid d-flex flex-row justify-content-around align-items-center">
-            <a id="logo" class="footer-logo navbar-brand text-center" href="index.html" style="color: black; ">
-                <img src="/assets/media/images/LogoWhite.png" alt="" class="logo-img">
+        <div class="footer-content">
+            <a class="footer-logo" href="index.html">
+                <img src="/assets/media/images/LogoBlack.png" alt="" class="logo-img">
             </a>
-            <div class="d-flex footer-extra">
-                <div class="d-flex flex-column w-100">
-                    <h2 class="text-center w-100">Contact Us</h2>
-                    <ul class="text-center justify-content-center ">
+            <div class="footer-extra">
+                <div>
+                    <h2 class="">Pages</h2>
+                    <ul class="">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/process">Process</a></li>
+                        <li><a href="/gallery">Gallery</a></li>
+                        <li><a href="/about">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Contact Us</h2>
+                    <ul>
+                        <li><a class="footer-contact-modal" href="" data-bs-toggle="modal" data-bs-target="#contact-modal">Get A Quote Form</a></li>
+                        <li><a href="tel:+7572316885">(757) 231-6885</a></li>
+                        <li><a href="mailto:team@andiepaints.com">Team@AndiePaints.com</a></li>
+                    </ul>
+                </div>
+                <div class="socials">
+                    <h2>Socials</h2> 
+                    <ul class="social-list d-flex flex-column">
                         <li>
-                            <a href="tel:+7572316885">(757) 231-6885</a>
+                            <a href="https://www.facebook.com/AndiePaints">
+                                <i class="social-icon fa-brands fa-facebook"></i>
+                                Facebook
+                            </a>
                         </li>
                         <li>
-                            <a href="mailto:team@andiepaints.com">Team@AndiePaints.com</a>
+                            <a href="https://www.instagram.com/andiepaints/">
+                                <i class="social-icon fa-brands fa-instagram"></i>
+                                Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://nextdoor.com/pages/andie-paints-chesapeake-va/">
+                                <img class="social-icon" src="/assets/media/images/Vector.svg" alt="">
+                                Nextdoor
+                            </a>
                         </li>
                     </ul>
                 </div>
-                <div class="socials d-flex flex-column w-100">
-                    <h2 class="text-center">Socials</h2> 
-                    <ul class="justify-content-center d-flex flex-row ">
-                        <li>
-                            <a href="https://www.facebook.com/AndiePaints"><i class="fa-brands fa-facebook-f"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://nextdoor.com/pages/andie-paints-chesapeake-va/"><img src="/assets/media/images/Vector.svg" alt=""></a>
-                        </li>
-                    </ul>
-    
-                </div>
-
             </div>
         </div>
         <p class="copyright">
             <i class="fa-regular fa-copyright"></i>
-            2022 Andie Ryan, LLC. All rights reserved
+            Andie Ryan, LLC. All rights reserved
         </p>    
     </section>
+  
+    <!-- Modal -->
+    <div style="z-index: 10000;" class="modal fade" id="contact-modal" tabindex="-1" aria-labelledby="contact-modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-1">Request a Quote</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div  class="d-flex flex-row content">
+                <form action="https://formspree.io/f/xqkodrlg" method="POST" id="contact-form-modal" class="needs-validation" novalidate>
+                    <h6 class="mb-3">
+                        Fill out this form and we will get back to you as soon as possible
+                    </h6>
+                    <fieldset id="form-content" class="has-validation">
+                        <div class="form-floating mb-3 has-validation">
+                            <input class="form-control" type="text" name="Name" id="full-name" placeholder="First and Last name" required>
+                            <label for="full-name" class="form-label">Full Name</label>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input class="form-control" type="email" name="Email" id="email-address" placeholder="email@example.com" required>
+                            <label class="form-label" for="email-address">Email Address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea style="height: 100px" class="form-control" rows="10" name="Message" id="message" placeholder=""required></textarea>
+                            <label for="message">Message</label>  
+                        </div>
+                        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                    </fieldset>
+                    <button form="contact-form-modal" class="btn modal-submit" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <script src="assets/js/lightbox.min.js"></script>
-    <script>
-        lightbox.option({
-          'disableScrolling': true,
-          'wrapAround': true,
-          'alwaysShowNavOnTouchDevices': true
-        })
-
-    </script>
+    <script src="assets/js/glightbox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
 
