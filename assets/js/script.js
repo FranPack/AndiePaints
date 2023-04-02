@@ -68,3 +68,7 @@ var swiper = new Swiper(".mySwiper", {
     }, false)
   })
 })()
+
+$(document).ready(function(){
+  alert("Website is under maintenance. Any and all features not functional, please come back later.")
+});
