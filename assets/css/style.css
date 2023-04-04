@@ -47,6 +47,9 @@
 [data-page="home"].sticky .logo-img-nav {
     filter: invert(1)
 }
+[data-page="gallery"] .navbar-toggler-icon::before, [data-page="about"] .navbar-toggler-icon::before, [data-page="progress"] .navbar-toggler-icon::before {
+    color:#212529;
+}
 :root {
     --yellow: #ffcc00;
     --green: #95978B;
@@ -162,6 +165,7 @@ body.sticky #navigation {
     text-align: left;
     padding-left: 20px;
     transition: .5s;
+    top: 0;
     border-bottom: 5px solid var(--pink);
     
  }
