@@ -602,7 +602,7 @@ body.sticky .nav-link {
     justify-content: center;
 }
 #footer {
-    z-index: 999;
+    /* z-index: 999; */
     background-color: white;
     box-shadow: 0 -5px 0 0 var(--pink);
     /* outline: 5px solid var(--pink); */
