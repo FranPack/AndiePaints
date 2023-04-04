@@ -70,6 +70,18 @@
     margin-left: 30px;
     width: 200px;
 }
+.offcanvas-header {
+    padding-top: 30px;
+    padding-right: 30px;
+}
+.offcanvas-header button {
+    border: none;
+    background-color: transparent;
+}
+.offcanvas-header i::before {
+    color: #212529;
+    font-size: 2rem;
+}
 #footer #logo {
     margin-left: 0;
 }
